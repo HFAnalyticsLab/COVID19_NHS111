@@ -3,7 +3,7 @@
 library(tidyverse)
 ## NHS 111 data
 NHS111 <- read_csv(here::here('data',
-                              "111 Online Covid-19 data_2020-04-07.csv"))
+                              "111 Online Covid-19 data_2020-04-13.csv"))
 NHS111 <- NHS111 %>% 
   mutate(date=lubridate::dmy(journeydate)) %>% 
   set_names(tolower(names(.))) %>% 
@@ -13,10 +13,10 @@ saveRDS(NHS111,here::here('data', 'NHS111.RDS'))
 
 ## NHS pathways
 pathways <- read_csv(here::here('data', 
-                                "NHS Pathways Covid-19 data 2020-04-07.csv"))
+                                "NHS Pathways Covid-19 data 2020-04-13.csv"))
 pathways <- pathways %>% 
   set_names(tolower(names(.))) %>% 
   janitor::clean_names() %>% 
-  mutate(date=dmy(call_date)) 
+  mutate(date=lubridate::dmy(call_date)) 
 
 saveRDS(pathways,here::here('data', 'pathways.RDS'))
