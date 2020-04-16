@@ -1,5 +1,7 @@
 library(curl)
 
+Sys.setenv(TZ="Europe/London")
+
 # NHS111 online 
 
 
@@ -20,4 +22,4 @@ link_pathways <- paste0('https://files.digital.nhs.uk/A6/FFFE0E/NHS%20Pathways%2
 destfile_pathways <- 'M:/COVID-19/COVID19_NHS111/data/original data/pathways.csv'
 curl_download(link_pathways, destfile = destfile_pathways )
 
-Sys.setenv(TZ="Europe/Berlin")
+
