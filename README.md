@@ -24,13 +24,12 @@ These scripts were written under R version 3.6.3 (2020-02-29) -- "Holding the wi
 The following R packages (available on CRAN) are needed: 
 
 * [**tidyverse**](https://www.tidyverse.org/)(1.3.0)
-* [**janitor**](https://cran.r-project.org/web/packages/janitor/index.html) (2.0
-1)
+* [**janitor**](https://cran.r-project.org/web/packages/janitor/index.html) (2.0.1)
 * [**lubridate**](https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html)(1.7.8)
 * [**testthat**](https://cran.r-project.org/web/packages/testthat/index.html)(2.3.2)
 * [**curl**](https://cran.r-project.org/web/packages/curl/index.html)(4.3)
 * [**taskscheduleR**](https://cran.r-project.org/web/packages/taskscheduleR/)(1.4) (Windows only)
-* [**THFstyle**] internal package
+* **THFstyle** internal package
 
 The shapefiles for the CCG map can be downloaded from https://www.arcgis.com/home/item.html?id=ecac7e1b2300434499c46c62284858c2#overview
 
@@ -39,6 +38,7 @@ Functions from internal package, theme_THF() and scale_XXX_THF() can be removed 
 ### Getting started
 
 The 'R' folder contains:
+
 * 0_download_data.R - download data.
 * 1_clean_data.R - Load, clean and save cleaned data. 
 * 2_NHS111_line_plots.R - Line plots of NHS 111 online assessments.
