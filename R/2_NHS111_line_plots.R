@@ -37,7 +37,7 @@ national_19_69<- national %>%
   national_label <- national %>% 
     group_by(ageband) %>% 
     mutate(label=ifelse(date==max(date), ageband, ''))
-  national_label %>% 
+p <-  national_label %>% 
     distinct(date, .keep_all = TRUE) %>% 
   ggplot(.) + 
     geom_line(aes(x=date, y=total_ageband, colour=ageband, group=ageband)) + 
@@ -50,8 +50,7 @@ national_19_69<- national %>%
     theme(plot.title = element_text(hjust = -0.5)) + 
   labs(caption='Source: NHS Digital', title = 'Completed online assessments in NHS 111 Online')
 ggsave(filename=here::here('output', 'NHS111online_ageband.png') ) 
-  
-  
+
 # By sex
 label_date=max(national$date)-1
 ggplot(national) + 
