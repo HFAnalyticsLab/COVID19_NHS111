@@ -1,5 +1,5 @@
 
-library(testthat)
+library(testthat) 
 
 NHS111 <- readRDS(here::here('data', 'NHS111.RDS')) %>% 
   filter(date==max(date))
@@ -30,5 +30,6 @@ test_that("All levels presents; NHS 111 online",{
   expect_equal(c('Female', 'Male', 'Unknown'), unique(pathways$sex))
   expect_equal(c('0-18 years', '19-69 years', '70-120 years', NA), unique(pathways$ageband))
 })
+
 
 
