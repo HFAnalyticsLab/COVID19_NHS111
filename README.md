@@ -10,13 +10,15 @@ A descriptive analysis of trends in NHS 111 activity related to COVID-19. NHS 11
 
 ## Data source
 
-We are using publically avaiable data published by NHS digital. 
+We are using publically available data published by NHS digital. The data used for this analysis is not included in this repository but can be downloaded from https://digital.nhs.uk/data-and-information/publications/statistical/mi-potential-covid-19-symptoms-reported-through-nhs-pathways-and-111-online/latest#.
 
 No information was used that could directly identify a patient or other individual. 
 
+The shapefiles for the CCG map can be downloaded from https://www.arcgis.com/home/item.html?id=ecac7e1b2300434499c46c62284858c2#overview
+
 ## How does it work?
 
-The data used for this analysis is not included in this repository but can be downloaded from https://digital.nhs.uk/data-and-information/publications/statistical/mi-potential-covid-19-symptoms-reported-through-nhs-pathways-and-111-online/latest#. The code can be used to replicate the analysis on this dataset. 
+The code can be used to replicate the analysis on this dataset. 
 
 ### Requirements
 
@@ -31,7 +33,6 @@ The following R packages (available on CRAN) are needed:
 * [**taskscheduleR**](https://cran.r-project.org/web/packages/taskscheduleR/)(1.4) (Windows only)
 * **THFstyle** internal package
 
-The shapefiles for the CCG map can be downloaded from https://www.arcgis.com/home/item.html?id=ecac7e1b2300434499c46c62284858c2#overview
 
 Functions from internal package, theme_THF() and scale_XXX_THF() can be removed or be replaced with eg theme_minimal().  
 
