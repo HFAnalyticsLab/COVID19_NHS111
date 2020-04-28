@@ -40,7 +40,7 @@ Functions from internal package, theme_THF() and scale_XXX_THF() can be removed 
 
 The 'R' folder contains:
 
-* 0_download_data.R - download data.
+* 0_download_data.R - scrape links from website and use to download data.
 * 1_clean_data.R - Load, clean and save cleaned data. 
 * 2_NHS111_line_plots.R - Line plots of NHS 111 online assessments.
 * 3_NHS111_population_pyramids.R - Population pyramid of NHS 111 online. assessments
