@@ -1,6 +1,8 @@
 library(curl)
 library(rvest)  
 library(polite)
+
+# COVID----
 # Grab links from website
 link <- 'https://digital.nhs.uk/data-and-information/publications/statistical/mi-potential-covid-19-symptoms-reported-through-nhs-pathways-and-111-online/latest'
 bow(link)
@@ -23,3 +25,5 @@ link_pathways <- named_links['NHS Pathways Potential COVID-19 Open Data']
 # scheduler won't run unless path is hard coded (drive mapping problem?)
 destfile_pathways <- here::here('data', 'original data',"pathways.csv")
 curl_download(link_pathways, destfile = destfile_pathways)
+
+

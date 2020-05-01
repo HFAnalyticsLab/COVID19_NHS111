@@ -58,12 +58,19 @@ ggplot(national) +
     geom_line(aes(x=date, y=total_sex, colour=sex, group=sex)) + 
     geom_point(aes(x=date, y=total_sex, colour=sex), size=2, fill='white') +
     geom_point(aes(x=date, y=total_sex), color='white', size=1) + theme_THF() + 
-    scale_x_date(date_breaks = "2 day") + 
+    scale_x_date(date_breaks = "3 day") + 
     scale_y_continuous(limits = c(0, NA), labels = scales::comma) + scale_colour_THF() + ylab('') + xlab('') +
     theme(plot.title = element_text(hjust = 0 ),         
-          plot.title.position='plot', legend.position = 'None') +
-    annotate(geom='text', x=label_date, y=5000, label='Male', colour=THF_50pct_light_blue) +
-    annotate(geom='text', x=label_date, y=24000, label='Female', colour=THF_red) +
+          plot.title.position='plot', legend.position = c(0.8,0.5)) +
     labs(caption='Source: NHS Digital', title='Completed online assessments in NHS 111 Online')
 ggsave(filename=here::here('output', 'NHS111online_sex.png') ) 
-  
+
+
+
+ggplot(national) + 
+  geom_col(aes(x=date, y=total_sex, fill=sex, group=sex)) + 
+  scale_x_date(date_breaks = "3 day") + theme_THF() +
+  scale_y_continuous(limits = c(0, NA), labels = scales::comma) + scale_fill_THF() + ylab('') + xlab('') +
+  theme(plot.title = element_text(hjust = 0 ),         
+        plot.title.position='plot', legend.position = c(0.8,0.5)) +
+  labs(caption='Source: NHS Digital', title='Completed online assessments in NHS 111 Online')
