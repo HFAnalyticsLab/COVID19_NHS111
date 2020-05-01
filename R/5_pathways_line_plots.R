@@ -51,13 +51,11 @@ ggplot(national) +
   geom_line(aes(x=date, y=total_sex, colour=sex, group=sex)) + 
   geom_point(aes(x=date, y=total_sex, colour=sex), size=2, fill='white') +
   geom_point(aes(x=date, y=total_sex), color='white', size=1) + 
-  theme_THF() + scale_x_date(date_breaks = "1 day") + theme(legend.position = 'None') +
+  theme_THF() + scale_x_date(date_breaks = "3 day") + 
+  theme(legend.position = c(1,0.4)) +
   scale_y_continuous(limits = c(0, NA), labels = scales::comma) + 
   scale_colour_THF() + ylab('') + xlab('') +
   ggtitle('NHS pathway triages through 111 and 999') + 
-  annotate(geom='text', x=label_date, y=5500, label='Male', colour=THF_50pct_light_blue) +
-  annotate(geom='text', x=label_date, y=9000, label='Female', colour=THF_red) +
-  annotate(geom='text', x=label_date, y=1000, label='Unknown', colour=THF_1_purple) +
   labs(caption='Source: NHS Digital')
 ggsave(filename=here::here('output', 'pathways_sex.png') ) 
  
