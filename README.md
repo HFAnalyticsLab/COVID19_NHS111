@@ -5,12 +5,12 @@
 
 ## Project Description
 
-A descriptive analysis of trends in NHS 111 activity related to COVID-19. NHS 111 actvity includes potential COVID-19 completed online assessments and potential COVID-19 triages in NHS Pathways through 111 or 999.  We are creating daily counts for England, in total and by gender and age band. 
+A descriptive analysis of trends in NHS 111 activity, both all calls and related to COVID-19. NHS 111 COVID-19 actvity includes potential COVID-19 completed online assessments and potential COVID-19 triages in NHS Pathways through 111 or 999.  We are creating daily counts for England, in total and by gender and age band. 
 
 
 ## Data source
 
-We are using publically available data published by NHS digital. The data used for this analysis is not included in this repository but can be downloaded from https://digital.nhs.uk/data-and-information/publications/statistical/mi-potential-covid-19-symptoms-reported-through-nhs-pathways-and-111-online/latest#.
+We are using publically available data published by NHS digital and NHS England. The data used for this analysis is not included in this repository but you can download  [COVID specific data](https://digital.nhs.uk/data-and-information/publications/statistical/mi-potential-covid-19-symptoms-reported-through-nhs-pathways-and-111-online/latest#) and [all NHS111 calls data](https://www.england.nhs.uk/statistics/statistical-work-areas/nhs-111-minimum-data-set/nhs-111-minimum-data-set-2019-20/).
 
 No information was used that could directly identify a patient or other individual. 
 
