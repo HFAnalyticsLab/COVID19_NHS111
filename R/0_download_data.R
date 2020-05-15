@@ -27,3 +27,27 @@ destfile_pathways <- here::here('data', 'original data',"pathways.csv")
 curl_download(link_pathways, destfile = destfile_pathways)
 
 
+### all NHS 111 calls
+link <- 'https://www.england.nhs.uk/statistics/statistical-work-areas/nhs-111-minimum-data-set/nhs-111-minimum-data-set-2020-21/'
+
+bow(link)
+page <- read_html(link)
+
+links_all_NHS111_csv <- page %>% 
+  html_nodes(xpath = "//a[contains(text(), 'CSV')]") %>%
+  html_attr('href')
+# links <- page %>% html_nodes(css="#main-content > article > p:nth-child(6) > a") %>% html_attr('href')
+
+filename_csv <- fs::path_file(links_all_NHS111_csv)
+
+curl_download(links_all_NHS111_csv, destfile = here::here('data', 'original data',filename_csv))
+
+
+links_all_NHS111_excel <- page %>% 
+  html_nodes(xpath = "//a[contains(text(), 'XLSX')]") %>%
+  html_attr('href')
+# links <- page %>% html_nodes(css="#main-content > article > p:nth-child(6) > a") %>% html_attr('href')
+
+filename_excel <- fs::path_file(links_all_NHS111_excel)
+
+curl_download(links_all_NHS111_excel, destfile = here::here('data', 'original data',filename_excel))
